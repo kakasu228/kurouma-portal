@@ -69,9 +69,11 @@ const firstWeekItems: GuideItem[] = [
     title: '②目標達成シートを提出する',
     description: '3ヶ月後の目標をシートに記入して提出しましょう。',
     sortOrder: 2,
+    media: [
+      { type: 'google-drive', url: 'https://drive.google.com/file/d/1ofMSNjhWqNizT1EsJQab4j1WGFQVG6Nf/view?usp=sharing', label: 'スマホでの編集方法（動画）' },
+    ],
     links: [
       { label: '目標達成シート', url: 'https://docs.google.com/document/d/placeholder-goal', type: 'google-sheets' },
-      { label: 'スマホでの編集方法（動画）', url: 'https://drive.google.com/file/d/1ofMSNjhWqNizT1EsJQab4j1WGFQVG6Nf/view?usp=sharing', type: 'external' },
     ],
     note: '※ スマートフォンから編集する場合は上の動画をご確認ください',
   },
@@ -81,9 +83,11 @@ const firstWeekItems: GuideItem[] = [
     title: '③自己理解シートを提出する',
     description: '自分の強み・弱みを整理して提出しましょう。',
     sortOrder: 3,
+    media: [
+      { type: 'google-drive', url: 'https://drive.google.com/file/d/1ofMSNjhWqNizT1EsJQab4j1WGFQVG6Nf/view?usp=sharing', label: 'スマホでの編集方法（動画）' },
+    ],
     links: [
       { label: '自己理解シート', url: 'https://docs.google.com/document/d/placeholder-self', type: 'google-sheets' },
-      { label: 'スマホでの編集方法（動画）', url: 'https://drive.google.com/file/d/1ofMSNjhWqNizT1EsJQab4j1WGFQVG6Nf/view?usp=sharing', type: 'external' },
     ],
     note: '※ スマートフォンから編集する場合は上の動画をご確認ください',
   },
@@ -140,9 +144,11 @@ const dailyItems: GuideItem[] = [
     title: '②毎朝パッション動画を投稿する',
     description: '①のマインドセットプログラムの内容をもとにアウトプットしましょう。表現力を鍛える、毎日継続する自信をつける、自分の課題を解決させるなど、目的を持って実践してください。自分の動画を見直すのはもちろんのこと、周りの人たちの動画を見ることで、メタ認知能力が鍛えられます。「自分はどう見られるのか？どのように表現したら見た人が面白いと感じるのか？」を考えて実践していきましょう。',
     sortOrder: 2,
+    media: [
+      { type: 'google-drive', url: 'https://drive.google.com/file/d/1vovJ2QN4Q_lJ-rGM-RkAvfOZ7syVHcts/view?usp=sharing', label: 'まずこちらの詳細説明を確認してください' },
+    ],
     links: [
       { label: 'パッション動画グループ', url: 'https://line.me/placeholder-passion', type: 'line' },
-      { label: '詳細説明はこちら', url: 'https://drive.google.com/file/d/1vovJ2QN4Q_lJ-rGM-RkAvfOZ7syVHcts/view?usp=sharing', type: 'external' },
     ],
     note: '※ 初投稿の動画は消さずに保存しておいてください！成長してから過去のものを比較できます。',
   },

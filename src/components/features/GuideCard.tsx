@@ -62,19 +62,24 @@ export function GuideCard({ item }: GuideCardProps) {
 
       {/* Media indicator */}
       {hasMedia && (
-        <div className="mt-3 flex flex-wrap gap-2">
-          {item.media!.map((m, i) => (
-            <a
-              key={i}
-              href={m.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-lg bg-purple-50 px-3 py-1.5 text-xs font-medium text-purple-600 active:bg-purple-100 transition-colors"
-            >
-              <Play size={14} />
-              {m.type === 'loom' ? 'Loom動画を見る' : '動画を見る'}
-            </a>
-          ))}
+        <div className="mt-3 space-y-2">
+          {item.media!.map((m, i) => {
+            const label =
+              m.type === 'loom' ? 'Loom動画を見る'
+              : m.label ?? '動画を見る'
+            return (
+              <a
+                key={i}
+                href={m.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex w-full items-center gap-2.5 rounded-lg bg-purple-50 px-3 py-2.5 text-[13px] font-medium text-purple-700 active:bg-purple-100 transition-colors"
+              >
+                <Play size={16} className="shrink-0" />
+                {label}
+              </a>
+            )
+          })}
         </div>
       )}
 

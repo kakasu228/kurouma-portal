@@ -6,8 +6,9 @@ export type LessonCategory =
   | 'self-improvement'
 
 export interface MediaEmbed {
-  type: 'youtube' | 'loom'
+  type: 'youtube' | 'loom' | 'google-drive'
   url: string
+  label?: string
 }
 
 export interface LessonAttachment {

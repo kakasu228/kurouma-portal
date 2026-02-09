@@ -22,36 +22,14 @@ export const GUIDE_SECTIONS: GuideSectionMeta[] = [
   },
 ]
 
-// ── A. 導入・オンボーディング（4件） ────────────────
+// ── A. 導入・オンボーディング（2件） ────────────────
 const onboardingItems: GuideItem[] = [
-  {
-    id: 'p0-01',
-    section: 'onboarding',
-    title: 'はじめに',
-    description: 'プログラムの全体像と進め方を確認しましょう。動画教材サイトと質問テンプレートはこちら。',
-    sortOrder: 0,
-    links: [
-      { label: '動画教材会員サイト', url: 'https://docs.google.com/document/d/1Kp2WQjNj-zILYujTJQTGTe-nfhVp5TnEkbbh7ezn50Y/edit?usp=sharing', type: 'google-docs' },
-      { label: '質問LINEテンプレート', url: 'https://docs.google.com/document/d/1E5-VdyoYkKSWwDHoEwmqGETXLhjhlqdMIS0JVjaAAOA/edit?usp=sharing', type: 'google-docs' },
-    ],
-    deletionCandidate: true,
-  },
-  {
-    id: 'p0-00',
-    section: 'onboarding',
-    title: 'Google Classroomの使い方',
-    description: 'Loom動画でClassroomの基本操作を確認しましょう。',
-    sortOrder: 1,
-    media: [
-      { type: 'loom', url: 'https://www.loom.com/share/948302630bbd48a5a9a3be003662f52c?sid=ce7ae634-7d07-4fc2-9673-3baa90a9ef32' },
-    ],
-  },
   {
     id: 'p0-02',
     section: 'onboarding',
     title: 'オープンチャットに入室',
     description: '仲間と繋がるLINEオープンチャットに参加しましょう。',
-    sortOrder: 2,
+    sortOrder: 0,
     links: [
       { label: '全体チャット', url: 'https://line.me/ti/g2/MTXPIrmD2_kUhRwtzerdn-64i2CkuhJExkkwjg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default', type: 'line' },
       { label: 'パッション&ユーモア', url: 'https://line.me/ti/g2/kh1hIQFIrB4Q7el52VLxv7W3OSPin1-XBwYGKA?utm_source=invitation&utm_medium=link_copy&utm_campaign=default', type: 'line' },
@@ -65,8 +43,8 @@ const onboardingItems: GuideItem[] = [
     id: 'p0-04',
     section: 'onboarding',
     title: '1on1コーチング予約',
-    description: '約1週間後に15分程度の電話で進捗を確認します。',
-    sortOrder: 3,
+    description: '約1週間後に15分程度の電話で進捗を確認します。カレンダーから予約してください。',
+    sortOrder: 1,
     links: [
       { label: '予約ページを開く', url: 'https://app.aitemasu.me/u/malianai204/15', type: 'aitemasu' },
     ],

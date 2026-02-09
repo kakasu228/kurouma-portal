@@ -26,7 +26,33 @@ export default function HomePage() {
         <h1 className="text-[20px] font-bold text-gray-900">
           {getGreeting()}、{user.name}さん
         </h1>
-        <p className="mt-1 text-sm text-gray-500">今日も一歩ずつ進みましょう</p>
+        <p className="mt-1 text-sm text-gray-500">改めまして、よろしくお願いいたします！</p>
+      </div>
+
+      {/* Intro guide */}
+      <div className="mx-4 mt-4 rounded-xl bg-blue-50 p-4">
+        <h2 className="text-[15px] font-semibold text-blue-900">
+          これから取り組んでいただくこと
+        </h2>
+        <ul className="mt-2 space-y-2 text-[13px] leading-relaxed text-blue-800">
+          <li className="flex gap-2">
+            <span className="shrink-0">📋</span>
+            <span><strong>入会後1週間課題</strong>：1週間以内に提出してください。</span>
+          </li>
+          <li className="flex gap-2">
+            <span className="shrink-0">✏️</span>
+            <span><strong>本日からの毎日課題</strong>：毎日取り組んでください！（毎日5分ほどで終わります）</span>
+          </li>
+          <li className="flex gap-2">
+            <span className="shrink-0">📞</span>
+            <span><strong>1on1予約</strong>：1週間課題の進捗確認や、それ以降の取り組みについてLINE通話で15分ほどお話しするので、カレンダー予約をしてください！</span>
+          </li>
+          <li className="flex gap-2">
+            <span className="shrink-0">📁</span>
+            <span><strong>そのほか</strong>：過去全ての添削やAIをまとめています！</span>
+          </li>
+        </ul>
+        <p className="mt-3 text-[12px] text-blue-600">順に進めていってください！わからないことがあれば都度聞いてください！</p>
       </div>
 
       {/* Guide Sections */}

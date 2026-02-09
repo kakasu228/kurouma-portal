@@ -57,7 +57,7 @@ const firstWeekItems: GuideItem[] = [
     id: 'fw-01',
     section: 'first-week',
     title: '①共通マインド確認',
-    description: 'Loom動画で黒馬プログラムのマインドセットを確認しましょう。',
+    description: 'Loom動画でクロウマプログラムのマインドセットを確認しましょう。',
     sortOrder: 1,
     media: [
       { type: 'loom', url: 'https://www.loom.com/share/b2793e71471449079503ccc19e69acfb?sid=81633033-0fd3-448b-a857-8a47b3c929c7' },

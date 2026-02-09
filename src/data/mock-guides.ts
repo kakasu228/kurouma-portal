@@ -73,7 +73,7 @@ const firstWeekItems: GuideItem[] = [
       { type: 'google-drive', url: 'https://drive.google.com/file/d/1ofMSNjhWqNizT1EsJQab4j1WGFQVG6Nf/view?usp=sharing', label: 'スマホでの編集方法（動画）' },
     ],
     links: [
-      { label: '目標達成シート', url: 'https://docs.google.com/document/d/placeholder-goal', type: 'google-sheets' },
+      { label: '目標達成シート', url: 'https://docs.google.com/spreadsheets/d/19DJN6wQfGlQ3QsX75IPUUMc5VyTj8rbeYBEhh_hv160/edit?gid=159185624#gid=159185624', type: 'google-sheets' },
     ],
     note: '※ スマートフォンから編集する場合は上の動画をご確認ください',
   },
@@ -87,7 +87,7 @@ const firstWeekItems: GuideItem[] = [
       { type: 'google-drive', url: 'https://drive.google.com/file/d/1ofMSNjhWqNizT1EsJQab4j1WGFQVG6Nf/view?usp=sharing', label: 'スマホでの編集方法（動画）' },
     ],
     links: [
-      { label: '自己理解シート', url: 'https://docs.google.com/document/d/placeholder-self', type: 'google-sheets' },
+      { label: '自己理解シート', url: 'https://docs.google.com/spreadsheets/d/1bjkPvC98RKujAiAGrFrl3C6Q_wCGAjeA_Ox-rFp5iog/edit?gid=0#gid=0', type: 'google-sheets' },
     ],
     note: '※ スマートフォンから編集する場合は上の動画をご確認ください',
   },
@@ -110,7 +110,7 @@ const firstWeekItems: GuideItem[] = [
     description: 'プロフィール写真と文章をグループに投稿してフィードバックをもらいましょう。',
     sortOrder: 5,
     links: [
-      { label: 'プロフ添削グループ', url: 'https://line.me/placeholder-profile', type: 'line' },
+      { label: 'プロフ添削グループ', url: 'https://line.me/ti/g2/Nx8zBfFZTQGBMPq7NGjIpAnQCIPd7dwtXXv3tw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default', type: 'line' },
     ],
   },
   {
@@ -120,7 +120,7 @@ const firstWeekItems: GuideItem[] = [
     description: '学びのアウトプット用ノートを作成して共有しましょう。',
     sortOrder: 6,
     links: [
-      { label: 'テンプレートをコピー', url: 'https://docs.google.com/document/d/placeholder-note', type: 'google-docs' },
+      { label: 'テンプレートをコピー', url: 'https://docs.google.com/document/d/1JGOGKWJKCQw5sXemsgzkL3pOQhU8JLr9kg2ZbhCX2fw/edit?usp=sharing', type: 'google-docs' },
     ],
     note: '※ Googleドキュメントのため、PCからの操作を推奨します',
   },
@@ -135,7 +135,7 @@ const dailyItems: GuideItem[] = [
     description: 'AI連携のマインドセットプログラムに毎日取り組みましょう。',
     sortOrder: 1,
     links: [
-      { label: 'プログラムを開始', url: 'https://placeholder-ai-mindset.com', type: 'external' },
+      { label: 'プログラムを開始', url: 'https://docs.google.com/document/d/1Bb-vDRxWjl_d9C8SpeMHy6CHK8BiLFdcfiH5rF_vwmI/edit?tab=t.0', type: 'google-docs' },
     ],
   },
   {
@@ -148,7 +148,7 @@ const dailyItems: GuideItem[] = [
       { type: 'google-drive', url: 'https://drive.google.com/file/d/1vovJ2QN4Q_lJ-rGM-RkAvfOZ7syVHcts/view?usp=sharing', label: 'まずこちらの詳細説明を確認してください' },
     ],
     links: [
-      { label: 'パッション動画グループ', url: 'https://line.me/placeholder-passion', type: 'line' },
+      { label: 'パッション動画グループ', url: 'https://line.me/ti/g2/kh1hIQFIrB4Q7el52VLxv7W3OSPin1-XBwYGKA?utm_source=invitation&utm_medium=link_copy&utm_campaign=default', type: 'line' },
     ],
     note: '※ 初投稿の動画は消さずに保存しておいてください！成長してから過去のものを比較できます。',
   },

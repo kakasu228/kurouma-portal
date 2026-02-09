@@ -35,6 +35,8 @@ export interface GuideItem {
   links?: ExternalLink[]
   /** 関連する既存レッスンのID（1週間課題→レッスン詳細への誘導用） */
   linkedLessonId?: string
+  /** カード下部に表示する補足メモ（例: PC推奨の注意書き） */
+  note?: string
   /** 削除候補フラグ（コンテンツ精査用。UIでは非表示） */
   deletionCandidate?: boolean
 }

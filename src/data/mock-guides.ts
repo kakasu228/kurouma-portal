@@ -71,9 +71,10 @@ const firstWeekItems: GuideItem[] = [
     description: '3ヶ月後の目標をシートに記入して提出しましょう。',
     sortOrder: 2,
     links: [
-      { label: '目標達成シート', url: 'https://docs.google.com/document/d/placeholder-goal', type: 'google-docs' },
+      { label: '目標達成シート', url: 'https://docs.google.com/document/d/placeholder-goal', type: 'google-sheets' },
     ],
     linkedLessonId: 'lesson-02',
+    note: '※ スプレッドシートのため、PCからの操作を推奨します',
   },
   {
     id: 'fw-03',
@@ -82,8 +83,9 @@ const firstWeekItems: GuideItem[] = [
     description: '自分の強み・弱みを整理して提出しましょう。',
     sortOrder: 3,
     links: [
-      { label: '自己理解シート', url: 'https://docs.google.com/document/d/placeholder-self', type: 'google-docs' },
+      { label: '自己理解シート', url: 'https://docs.google.com/document/d/placeholder-self', type: 'google-sheets' },
     ],
+    note: '※ スプレッドシートのため、PCからの操作を推奨します',
     linkedLessonId: 'lesson-11',
   },
   {

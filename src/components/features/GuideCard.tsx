@@ -10,6 +10,7 @@ import {
   ExternalLink,
   BookOpen,
   ChevronRight,
+  Monitor,
 } from 'lucide-react'
 import type { GuideItem, ExternalLinkType } from '@/types'
 import { useLessons } from '@/hooks/useLessons'
@@ -96,6 +97,14 @@ export function GuideCard({ item }: GuideCardProps) {
               </a>
             )
           })}
+        </div>
+      )}
+
+      {/* Note (e.g. PC推奨) */}
+      {item.note && (
+        <div className="mt-3 flex items-center gap-1.5 rounded-lg bg-amber-50 px-3 py-2 text-[12px] text-amber-700">
+          <Monitor size={14} className="shrink-0" />
+          {item.note}
         </div>
       )}
 

@@ -37,6 +37,10 @@ export default function HomePage() {
         </h2>
         <ul className="mt-2 space-y-2 text-[13px] leading-relaxed text-blue-800">
           <li className="flex gap-2">
+            <span className="shrink-0">🚀</span>
+            <span><strong>入会後すぐの方へ</strong>：まずはこちらを確認して、オープンチャットへの参加と1on1予約を済ませてください。</span>
+          </li>
+          <li className="flex gap-2">
             <span className="shrink-0">📋</span>
             <span><strong>入会後1週間課題</strong>：1週間以内に提出してください。</span>
           </li>

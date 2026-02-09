@@ -1,0 +1,88 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Noto Sans JP", sans-serif;
+
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-300: #93c5fd;
+  --color-brand-400: #60a5fa;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+  --color-brand-800: #1e40af;
+  --color-brand-900: #1e3a8a;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: #f9fafb;
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Safe area padding for iOS */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Hide scrollbar for category chips / filter bars */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Prose overrides for lesson body */
+.lesson-body h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  color: #111827;
+}
+.lesson-body h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  color: #111827;
+}
+.lesson-body p {
+  font-size: 14px;
+  line-height: 1.75;
+  margin-bottom: 12px;
+  color: #111827;
+}
+.lesson-body ul,
+.lesson-body ol {
+  font-size: 14px;
+  padding-left: 20px;
+  margin-bottom: 12px;
+}
+.lesson-body li {
+  margin-bottom: 4px;
+  line-height: 1.75;
+}
+.lesson-body strong {
+  font-weight: 600;
+}
+.lesson-body a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+.lesson-body a:hover {
+  text-decoration: underline;
+}
+.lesson-body blockquote {
+  border-left: 3px solid #e5e7eb;
+  padding-left: 12px;
+  color: #6b7280;
+  margin: 16px 0;
+  font-style: normal;
+}

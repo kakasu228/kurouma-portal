@@ -95,9 +95,9 @@ const firstWeekItems: GuideItem[] = [
     description: '漫画なのですぐ読めます。3巻すべて読みましょう。',
     sortOrder: 4,
     links: [
-      { label: '必読書①', url: 'https://www.amazon.co.jp/dp/placeholder1', type: 'amazon' },
-      { label: '必読書②', url: 'https://www.amazon.co.jp/dp/placeholder2', type: 'amazon' },
-      { label: '必読書③', url: 'https://www.amazon.co.jp/dp/placeholder3', type: 'amazon' },
+      { label: '必読書①', url: 'https://amzn.asia/d/9kMYMTg', type: 'amazon' },
+      { label: '必読書②', url: 'https://amzn.asia/d/hCYuOoH', type: 'amazon' },
+      { label: '必読書③', url: 'https://amzn.asia/d/g9ebPbu', type: 'amazon' },
     ],
   },
   {

@@ -9,3 +9,4 @@ export type {
   GuideItem,
   GuideSectionMeta,
 } from './guide'
+export type { CompletionRecord, CompletionService } from './completion'

@@ -11,9 +11,12 @@ import {
   BookOpen,
   ChevronRight,
   Monitor,
+  Check,
 } from 'lucide-react'
+import { cn } from '@/utils/cn'
 import type { GuideItem, ExternalLinkType } from '@/types'
 import { useLessons } from '@/hooks/useLessons'
+import { useCompletions } from '@/hooks/useCompletions'
 
 const LINK_ICON: Record<ExternalLinkType, typeof FileText> = {
   loom: Play,
@@ -44,6 +47,8 @@ interface GuideCardProps {
 export function GuideCard({ item }: GuideCardProps) {
   const navigate = useNavigate()
   const { getLessonById } = useLessons()
+  const { isCompleted, toggleCompletion } = useCompletions()
+  const completed = isCompleted(item.id)
   const hasMedia = item.media && item.media.length > 0
   const hasLinks = item.links && item.links.length > 0
   const linkedLesson = item.linkedLessonId
@@ -51,12 +56,41 @@ export function GuideCard({ item }: GuideCardProps) {
     : undefined
 
   return (
-    <div className="rounded-xl bg-white p-4 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
+    <div
+      className={cn(
+        'relative rounded-xl bg-white p-4 shadow-[0_1px_3px_rgba(0,0,0,0.06)] transition-all duration-200',
+        completed && 'border-l-[3px] border-l-emerald-400 bg-emerald-50/30',
+      )}
+    >
+      {/* Completion toggle */}
+      <button
+        onClick={() => toggleCompletion(item.id)}
+        className={cn(
+          'absolute right-3 top-3 flex h-7 w-7 items-center justify-center rounded-full border-2 transition-all duration-200',
+          completed
+            ? 'border-emerald-500 bg-emerald-500'
+            : 'border-gray-300 bg-white active:border-gray-400',
+        )}
+        aria-label={completed ? '完了を取り消す' : '完了にする'}
+      >
+        {completed && <Check size={14} className="text-white" strokeWidth={3} />}
+      </button>
+
       {/* Title + description */}
-      <h3 className="text-[15px] font-medium leading-snug text-gray-900">
+      <h3
+        className={cn(
+          'pr-10 text-[15px] font-medium leading-snug transition-colors duration-200',
+          completed ? 'text-gray-400 line-through decoration-gray-300' : 'text-gray-900',
+        )}
+      >
         {item.title}
       </h3>
-      <p className="mt-1 text-[13px] leading-relaxed text-gray-500">
+      <p
+        className={cn(
+          'mt-1 text-[13px] leading-relaxed transition-colors duration-200',
+          completed ? 'text-gray-300' : 'text-gray-500',
+        )}
+      >
         {item.description}
       </p>
 

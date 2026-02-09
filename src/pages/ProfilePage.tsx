@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { HelpCircle, MessageCircle } from 'lucide-react'
+import { HelpCircle, MessageCircle, Shield } from 'lucide-react'
 import { PageContainer } from '@/components/layout/PageContainer'
 import { ProfileHeader } from '@/components/features/ProfileHeader'
 import { InfoList } from '@/components/features/InfoList'
@@ -42,6 +42,18 @@ export default function ProfilePage() {
               icon={<MessageCircle size={20} />}
               label="LINEで問い合わせ"
               onClick={() => window.open('https://line.me/R/ti/p/@kurouma-support', '_blank')}
+            />
+          </div>
+        </section>
+
+        {/* Admin */}
+        <section className="mb-8">
+          <h2 className="mb-3 text-base font-semibold text-gray-900">管理</h2>
+          <div className="space-y-3">
+            <MenuLink
+              icon={<Shield size={20} />}
+              label="管理者ダッシュボード"
+              onClick={() => navigate('/admin')}
             />
           </div>
         </section>

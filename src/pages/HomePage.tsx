@@ -1,8 +1,10 @@
 import { MessageSquare } from 'lucide-react'
 import { PageContainer } from '@/components/layout/PageContainer'
 import { GuideCard } from '@/components/features/GuideCard'
+import { CompletionProgress } from '@/components/features/CompletionProgress'
 import { MessageTemplates } from '@/components/features/MessageTemplates'
 import { useAuth } from '@/hooks/useAuth'
+import { useCompletions } from '@/hooks/useCompletions'
 import { getGreeting } from '@/utils/date'
 import { GUIDE_ITEMS, GUIDE_SECTIONS } from '@/data/mock-guides'
 import type { GuideSection } from '@/types'
@@ -15,6 +17,7 @@ const SECTION_ROMAN: Record<GuideSection, string> = {
 
 export default function HomePage() {
   const { user } = useAuth()
+  const { isCompleted } = useCompletions()
 
   return (
     <PageContainer className="pt-0">
@@ -25,6 +28,9 @@ export default function HomePage() {
         </h1>
         <p className="mt-1 text-sm text-gray-500">改めまして、よろしくお願いいたします！</p>
       </div>
+
+      {/* Progress bar */}
+      <CompletionProgress />
 
       {/* Intro guide */}
       <div className="mx-4 mt-4 rounded-xl bg-blue-50 p-4">
@@ -60,6 +66,7 @@ export default function HomePage() {
         const items = GUIDE_ITEMS.filter((g) => g.section === section.key)
           .sort((a, b) => a.sortOrder - b.sortOrder)
         const roman = SECTION_ROMAN[section.key]
+        const sectionCompleted = items.filter((g) => isCompleted(g.id)).length
 
         return (
           <div key={section.key}>
@@ -71,6 +78,11 @@ export default function HomePage() {
                 <h2 className="text-base font-semibold text-gray-900">
                   {section.label}
                 </h2>
+                {sectionCompleted > 0 && (
+                  <span className="ml-auto text-[12px] font-medium text-emerald-600">
+                    {sectionCompleted}/{items.length}
+                  </span>
+                )}
               </div>
               <p className="mb-3 text-xs text-gray-400">{section.description}</p>
               <div className="space-y-3">

@@ -9,6 +9,7 @@ const LessonDetailPage = lazy(() => import('@/pages/LessonDetailPage'))
 const SchedulePage = lazy(() => import('@/pages/SchedulePage'))
 const FaqPage = lazy(() => import('@/pages/FaqPage'))
 const ProfilePage = lazy(() => import('@/pages/ProfilePage'))
+const AdminPage = lazy(() => import('@/pages/AdminPage'))
 const NotFoundPage = lazy(() => import('@/pages/NotFoundPage'))
 
 function Wrap({ children }: { children: React.ReactNode }) {
@@ -25,6 +26,7 @@ export const router = createBrowserRouter([
       { path: 'schedule', element: <Wrap><SchedulePage /></Wrap> },
       { path: 'faq', element: <Wrap><FaqPage /></Wrap> },
       { path: 'profile', element: <Wrap><ProfilePage /></Wrap> },
+      { path: 'admin', element: <Wrap><AdminPage /></Wrap> },
     ],
   },
   { path: '*', element: <Wrap><NotFoundPage /></Wrap> },

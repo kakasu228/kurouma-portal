@@ -126,7 +126,7 @@ function TemplateItem({ template }: { template: Template }) {
 
 export function MessageTemplates() {
   return (
-    <div className="px-4 pt-6">
+    <div id="message-templates" className="px-4 pt-6">
       <div className="flex items-center gap-2 mb-3">
         <MessageSquare size={18} className="text-blue-500" />
         <h2 className="text-base font-semibold text-gray-900">

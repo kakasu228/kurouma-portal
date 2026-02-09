@@ -1,3 +1,4 @@
+import { MessageSquare } from 'lucide-react'
 import { PageContainer } from '@/components/layout/PageContainer'
 import { GuideCard } from '@/components/features/GuideCard'
 import { MessageTemplates } from '@/components/features/MessageTemplates'
@@ -45,6 +46,13 @@ export default function HomePage() {
           </li>
         </ul>
         <p className="mt-3 text-[12px] text-blue-600">順に進めていってください！わからないことがあれば都度聞いてください！</p>
+        <button
+          onClick={() => document.getElementById('message-templates')?.scrollIntoView({ behavior: 'smooth' })}
+          className="mt-3 flex w-full items-center justify-center gap-1.5 rounded-lg bg-blue-100 px-3 py-2 text-[13px] font-medium text-blue-700 active:bg-blue-200 transition-colors"
+        >
+          <MessageSquare size={14} />
+          質問・報告テンプレートを見る
+        </button>
       </div>
 
       {/* Guide Sections */}

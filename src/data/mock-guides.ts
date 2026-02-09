@@ -60,7 +60,7 @@ const firstWeekItems: GuideItem[] = [
     description: 'Loom動画で黒馬プログラムのマインドセットを確認しましょう。',
     sortOrder: 1,
     media: [
-      { type: 'loom', url: 'https://www.loom.com/embed/placeholder-mindset' },
+      { type: 'loom', url: 'https://www.loom.com/share/b2793e71471449079503ccc19e69acfb?sid=81633033-0fd3-448b-a857-8a47b3c929c7' },
     ],
   },
   {

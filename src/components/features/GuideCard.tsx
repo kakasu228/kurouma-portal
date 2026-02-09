@@ -12,6 +12,7 @@ import {
   ChevronRight,
   Monitor,
   Check,
+  CircleCheckBig,
 } from 'lucide-react'
 import { cn } from '@/utils/cn'
 import type { GuideItem, ExternalLinkType } from '@/types'
@@ -58,39 +59,15 @@ export function GuideCard({ item }: GuideCardProps) {
   return (
     <div
       className={cn(
-        'relative rounded-xl bg-white p-4 shadow-[0_1px_3px_rgba(0,0,0,0.06)] transition-all duration-200',
-        completed && 'border-l-[3px] border-l-emerald-400 bg-emerald-50/30',
+        'rounded-xl bg-white p-4 shadow-[0_1px_3px_rgba(0,0,0,0.06)] transition-all duration-300',
+        completed && 'ring-2 ring-emerald-400/50 bg-emerald-50/20',
       )}
     >
-      {/* Completion toggle */}
-      <button
-        onClick={() => toggleCompletion(item.id)}
-        className={cn(
-          'absolute right-3 top-3 flex h-7 w-7 items-center justify-center rounded-full border-2 transition-all duration-200',
-          completed
-            ? 'border-emerald-500 bg-emerald-500'
-            : 'border-gray-300 bg-white active:border-gray-400',
-        )}
-        aria-label={completed ? '完了を取り消す' : '完了にする'}
-      >
-        {completed && <Check size={14} className="text-white" strokeWidth={3} />}
-      </button>
-
       {/* Title + description */}
-      <h3
-        className={cn(
-          'pr-10 text-[15px] font-medium leading-snug transition-colors duration-200',
-          completed ? 'text-gray-400 line-through decoration-gray-300' : 'text-gray-900',
-        )}
-      >
+      <h3 className="text-[15px] font-medium leading-snug text-gray-900">
         {item.title}
       </h3>
-      <p
-        className={cn(
-          'mt-1 text-[13px] leading-relaxed transition-colors duration-200',
-          completed ? 'text-gray-300' : 'text-gray-500',
-        )}
-      >
+      <p className="mt-1 text-[13px] leading-relaxed text-gray-500">
         {item.description}
       </p>
 
@@ -167,6 +144,29 @@ export function GuideCard({ item }: GuideCardProps) {
           <ChevronRight size={16} className="shrink-0 text-blue-400" />
         </button>
       )}
+
+      {/* Completion button */}
+      <button
+        onClick={() => toggleCompletion(item.id)}
+        className={cn(
+          'mt-4 flex w-full items-center justify-center gap-2 rounded-xl py-3 text-[14px] font-semibold transition-all duration-300',
+          completed
+            ? 'bg-emerald-500 text-white active:bg-emerald-600'
+            : 'bg-blue-500 text-white active:bg-blue-600',
+        )}
+      >
+        {completed ? (
+          <>
+            <CircleCheckBig size={18} />
+            完了済み！
+          </>
+        ) : (
+          <>
+            <Check size={18} />
+            完了にする
+          </>
+        )}
+      </button>
     </div>
   )
 }

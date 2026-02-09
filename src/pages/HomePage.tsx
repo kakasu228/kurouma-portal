@@ -5,6 +5,7 @@ import {
 } from 'lucide-react'
 import { PageContainer } from '@/components/layout/PageContainer'
 import { GuideCard } from '@/components/features/GuideCard'
+import { MessageTemplates } from '@/components/features/MessageTemplates'
 import { useAuth } from '@/hooks/useAuth'
 import { getGreeting } from '@/utils/date'
 import { GUIDE_ITEMS, GUIDE_SECTIONS } from '@/data/mock-guides'
@@ -43,14 +44,6 @@ export default function HomePage() {
             <span className="shrink-0">✏️</span>
             <span><strong>本日からの毎日課題</strong>：毎日取り組んでください！（毎日5分ほどで終わります）</span>
           </li>
-          <li className="flex gap-2">
-            <span className="shrink-0">📞</span>
-            <span><strong>1on1予約</strong>：1週間課題の進捗確認や、それ以降の取り組みについてLINE通話で15分ほどお話しするので、カレンダー予約をしてください！</span>
-          </li>
-          <li className="flex gap-2">
-            <span className="shrink-0">📁</span>
-            <span><strong>そのほか</strong>：過去全ての添削やAIをまとめています！</span>
-          </li>
         </ul>
         <p className="mt-3 text-[12px] text-blue-600">順に進めていってください！わからないことがあれば都度聞いてください！</p>
       </div>
@@ -78,6 +71,9 @@ export default function HomePage() {
           </section>
         )
       })}
+
+      {/* Message templates */}
+      <MessageTemplates />
 
       {/* bottom spacer */}
       <div className="h-4" />

@@ -43,7 +43,7 @@ const onboardingItems: GuideItem[] = [
     id: 'p0-04',
     section: 'onboarding',
     title: '1on1コーチング予約',
-    description: '約1週間後に15分程度の電話で進捗を確認します。カレンダーから予約してください。',
+    description: '1週間課題の進捗確認や、それ以降の取り組みについてLINE通話で15分ほどお話しします。カレンダーから予約してください。',
     sortOrder: 1,
     links: [
       { label: '予約ページを開く', url: 'https://app.aitemasu.me/u/malianai204/15', type: 'aitemasu' },

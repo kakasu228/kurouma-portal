@@ -14,56 +14,6 @@ export const CATEGORY_META: Record<
 export const LESSONS: Lesson[] = [
   // マインドセット
   {
-    id: 'lesson-01',
-    category: 'mindset',
-    title: '自信を育てる3つの習慣',
-    description: '日々の小さな行動で自信を積み上げる方法を学びます。',
-    durationMinutes: 10,
-    body: `
-      <h2>自信とは何か</h2>
-      <p>自信とは「自分にはできる」という感覚です。これは生まれ持ったものではなく、<strong>小さな成功体験の積み重ね</strong>で育てていくものです。</p>
-      <h3>習慣1: 毎日の小さな挑戦</h3>
-      <p>毎日1つ、普段やらないことに挑戦しましょう。コンビニで店員さんに「ありがとう」と言う、新しいランチのお店に行く、など些細なことでOKです。</p>
-      <h3>習慣2: 成功日記をつける</h3>
-      <p>寝る前に、その日「うまくいったこと」を3つ書き出しましょう。どんなに小さなことでも構いません。</p>
-      <h3>習慣3: 姿勢を正す</h3>
-      <p>背筋を伸ばし、胸を張るだけで、脳は「自信がある状態」だと認識します。これは心理学で<strong>エンボディメント</strong>と呼ばれています。</p>
-      <blockquote>自信は結果ではなく、プロセスです。毎日の小さな一歩が、大きな変化につながります。</blockquote>
-    `,
-    media: [
-      { type: 'youtube', url: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
-    ],
-    attachments: [],
-    featured: true,
-    sortOrder: 1,
-  },
-  {
-    id: 'lesson-02',
-    category: 'mindset',
-    title: '目標設定の技術',
-    description: 'SMARTゴールで3ヶ月後の自分をデザインする。',
-    durationMinutes: 15,
-    body: `
-      <h2>SMARTゴール設定</h2>
-      <p>目標は以下の5つの条件を満たすべきです：</p>
-      <ul>
-        <li><strong>Specific</strong>（具体的）: 何をするか明確に</li>
-        <li><strong>Measurable</strong>（測定可能）: 達成度を数値化</li>
-        <li><strong>Achievable</strong>（達成可能）: 現実的な範囲で</li>
-        <li><strong>Relevant</strong>（関連性）: 自分の目的と合致</li>
-        <li><strong>Time-bound</strong>（期限付き）: いつまでに達成するか</li>
-      </ul>
-      <h3>実践ワーク</h3>
-      <p>3ヶ月後の目標を3つ、SMARTの形式で書き出してみましょう。</p>
-    `,
-    media: [],
-    attachments: [
-      { title: '目標設定ワークシート', url: 'https://docs.google.com/document/d/example1', type: 'google-docs' },
-    ],
-    featured: false,
-    sortOrder: 2,
-  },
-  {
     id: 'lesson-03',
     category: 'mindset',
     title: 'ネガティブ思考の手放し方',
@@ -272,33 +222,6 @@ export const LESSONS: Lesson[] = [
   },
 
   // 自分磨き
-  {
-    id: 'lesson-11',
-    category: 'self-improvement',
-    title: '自己分析ワークシート',
-    description: '自分の強みと弱みを明確にし、改善ポイントを特定します。',
-    durationMinutes: 30,
-    body: `
-      <h2>このレッスンの目標</h2>
-      <p>自分の強みと弱みを明確にし、改善すべきポイントを特定します。</p>
-      <h3>ステップ1: 自分の強みを書き出す</h3>
-      <p>以下の質問に答えてください：</p>
-      <ul>
-        <li>友人や同僚からよく褒められることは何ですか？</li>
-        <li>自分が得意だと感じることは何ですか？</li>
-        <li>過去に成功した経験を3つ挙げてください。</li>
-      </ul>
-      <h3>ステップ2: 改善ポイントの特定</h3>
-      <p>次に、改善したい点を具体的に書き出しましょう。抽象的ではなく、<strong>行動レベルで書く</strong>ことが大切です。</p>
-    `,
-    media: [],
-    attachments: [
-      { title: '自己分析ワークシート', url: 'https://docs.google.com/document/d/example4', type: 'google-docs' },
-      { title: '自己分析テンプレート', url: 'https://docs.google.com/forms/d/example2', type: 'google-forms' },
-    ],
-    featured: false,
-    sortOrder: 11,
-  },
   {
     id: 'lesson-12',
     category: 'self-improvement',

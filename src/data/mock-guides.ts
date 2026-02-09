@@ -43,7 +43,7 @@ const onboardingItems: GuideItem[] = [
     id: 'p0-04',
     section: 'onboarding',
     title: '1on1コーチング予約',
-    description: '1週間課題の進捗確認や、それ以降の取り組みについてLINE通話で15分ほどお話しします。カレンダーから予約してください。',
+    description: '1週間課題の進捗確認や、それ以降の取り組みについてLINE通話で15分ほどお話しします。入会から約1週間後の日程を選んで予約してください。',
     sortOrder: 1,
     links: [
       { label: '予約ページを開く', url: 'https://app.aitemasu.me/u/malianai204/15', type: 'aitemasu' },
@@ -62,7 +62,6 @@ const firstWeekItems: GuideItem[] = [
     media: [
       { type: 'loom', url: 'https://www.loom.com/embed/placeholder-mindset' },
     ],
-    linkedLessonId: 'lesson-01',
   },
   {
     id: 'fw-02',
@@ -73,7 +72,6 @@ const firstWeekItems: GuideItem[] = [
     links: [
       { label: '目標達成シート', url: 'https://docs.google.com/document/d/placeholder-goal', type: 'google-sheets' },
     ],
-    linkedLessonId: 'lesson-02',
     note: '※ スプレッドシートのため、PCからの操作を推奨します',
   },
   {
@@ -86,7 +84,6 @@ const firstWeekItems: GuideItem[] = [
       { label: '自己理解シート', url: 'https://docs.google.com/document/d/placeholder-self', type: 'google-sheets' },
     ],
     note: '※ スプレッドシートのため、PCからの操作を推奨します',
-    linkedLessonId: 'lesson-11',
   },
   {
     id: 'fw-04',
@@ -109,7 +106,6 @@ const firstWeekItems: GuideItem[] = [
     links: [
       { label: 'プロフ添削グループ', url: 'https://line.me/placeholder-profile', type: 'line' },
     ],
-    linkedLessonId: 'lesson-10',
   },
   {
     id: 'fw-06',
@@ -120,6 +116,7 @@ const firstWeekItems: GuideItem[] = [
     links: [
       { label: 'テンプレートをコピー', url: 'https://docs.google.com/document/d/placeholder-note', type: 'google-docs' },
     ],
+    note: '※ Googleドキュメントのため、PCからの操作を推奨します',
   },
 ]
 

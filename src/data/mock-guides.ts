@@ -152,16 +152,6 @@ const dailyItems: GuideItem[] = [
     ],
     note: '※ 初投稿の動画は消さずに保存しておいてください！成長してから過去のものを比較できます。',
   },
-  {
-    id: 'dt-03',
-    section: 'daily',
-    title: '③毎晩「今日できたこと」を報告する',
-    description: '寝る前にその日できたことをAIチャットで報告しましょう。',
-    sortOrder: 3,
-    links: [
-      { label: '報告する', url: 'https://placeholder-ai-report.com', type: 'external' },
-    ],
-  },
 ]
 
 // ── 全ガイドアイテム ────────────────────────────────

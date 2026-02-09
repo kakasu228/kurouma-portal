@@ -1,19 +1,14 @@
-import { useNavigate } from 'react-router-dom'
 import {
-  ChevronRight,
   Rocket,
   CalendarCheck,
   Repeat,
 } from 'lucide-react'
 import { PageContainer } from '@/components/layout/PageContainer'
-import { CategoryChip } from '@/components/features/CategoryChip'
 import { GuideCard } from '@/components/features/GuideCard'
-import { ScheduleCard } from '@/components/features/ScheduleCard'
 import { useAuth } from '@/hooks/useAuth'
-import { useSchedule } from '@/hooks/useSchedule'
 import { getGreeting } from '@/utils/date'
 import { GUIDE_ITEMS, GUIDE_SECTIONS } from '@/data/mock-guides'
-import type { LessonCategory, GuideSection } from '@/types'
+import type { GuideSection } from '@/types'
 
 const SECTION_ICONS: Record<GuideSection, typeof Rocket> = {
   onboarding: Rocket,
@@ -21,20 +16,8 @@ const SECTION_ICONS: Record<GuideSection, typeof Rocket> = {
   daily: Repeat,
 }
 
-const CATEGORIES: LessonCategory[] = [
-  'mindset',
-  'communication',
-  'fashion',
-  'dating',
-  'self-improvement',
-]
-
 export default function HomePage() {
-  const navigate = useNavigate()
   const { user } = useAuth()
-  const { upcomingEvents } = useSchedule()
-
-  const nextSchedule = upcomingEvents[0]
 
   return (
     <PageContainer className="pt-0">
@@ -70,41 +53,8 @@ export default function HomePage() {
         )
       })}
 
-      {/* Category Chips */}
-      <section className="px-4 pt-6">
-        <h2 className="mb-3 text-base font-semibold text-gray-900">
-          カテゴリから教材を探す
-        </h2>
-        <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide snap-x">
-          {CATEGORIES.map((cat) => (
-            <CategoryChip key={cat} category={cat} />
-          ))}
-        </div>
-        <button
-          onClick={() => navigate('/lessons')}
-          className="mt-2 flex w-full items-center justify-end gap-1 text-sm font-medium text-blue-500"
-        >
-          すべての教材を見る
-          <ChevronRight size={16} />
-        </button>
-      </section>
-
-      {/* Next Schedule */}
-      {nextSchedule && (
-        <section className="px-4 pt-6 pb-4">
-          <h2 className="mb-3 text-base font-semibold text-gray-900">
-            次の予定
-          </h2>
-          <ScheduleCard event={nextSchedule} />
-          <button
-            onClick={() => navigate('/schedule')}
-            className="mt-3 flex w-full items-center justify-end gap-1 text-sm font-medium text-blue-500"
-          >
-            すべての予定を見る
-            <ChevronRight size={16} />
-          </button>
-        </section>
-      )}
+      {/* bottom spacer */}
+      <div className="h-4" />
     </PageContainer>
   )
 }

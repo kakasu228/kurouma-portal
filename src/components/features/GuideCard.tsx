@@ -8,9 +8,11 @@ import {
   MessageCircle,
   CalendarCheck,
   ExternalLink,
+  BookOpen,
   ChevronRight,
 } from 'lucide-react'
 import type { GuideItem, ExternalLinkType } from '@/types'
+import { useLessons } from '@/hooks/useLessons'
 
 const LINK_ICON: Record<ExternalLinkType, typeof FileText> = {
   loom: Play,
@@ -40,8 +42,12 @@ interface GuideCardProps {
 
 export function GuideCard({ item }: GuideCardProps) {
   const navigate = useNavigate()
+  const { getLessonById } = useLessons()
   const hasMedia = item.media && item.media.length > 0
   const hasLinks = item.links && item.links.length > 0
+  const linkedLesson = item.linkedLessonId
+    ? getLessonById(item.linkedLessonId)
+    : undefined
 
   return (
     <div className="rounded-xl bg-white p-4 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
@@ -93,14 +99,24 @@ export function GuideCard({ item }: GuideCardProps) {
         </div>
       )}
 
-      {/* Linked lesson */}
-      {item.linkedLessonId && (
+      {/* Linked lesson — banner style */}
+      {linkedLesson && (
         <button
-          onClick={() => navigate(`/lessons/${item.linkedLessonId}`)}
-          className="mt-3 flex items-center gap-1 text-xs font-medium text-blue-500 active:text-blue-700 transition-colors"
+          onClick={() => navigate(`/lessons/${linkedLesson.id}`)}
+          className="mt-3 flex w-full items-center gap-3 rounded-lg bg-blue-50 px-3 py-2.5 text-left active:bg-blue-100 transition-colors"
         >
-          関連教材を見る
-          <ChevronRight size={14} />
+          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-100">
+            <BookOpen size={16} className="text-blue-600" />
+          </div>
+          <div className="min-w-0 flex-1">
+            <p className="text-[13px] font-medium text-blue-900 truncate">
+              {linkedLesson.title}
+            </p>
+            <p className="text-[11px] text-blue-500">
+              教材を見る・{linkedLesson.durationMinutes}分
+            </p>
+          </div>
+          <ChevronRight size={16} className="shrink-0 text-blue-400" />
         </button>
       )}
     </div>

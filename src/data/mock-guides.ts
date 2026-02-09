@@ -125,24 +125,26 @@ const firstWeekItems: GuideItem[] = [
 // ── C. 毎日課題（3件） ──────────────────────────────
 const dailyItems: GuideItem[] = [
   {
-    id: 'dt-01',
-    section: 'daily',
-    title: '①毎朝パッション動画を投稿する',
-    description: '毎朝、今日の意気込みを動画で撮影してLINEグループに投稿しましょう。',
-    sortOrder: 1,
-    links: [
-      { label: 'パッション動画グループ', url: 'https://line.me/placeholder-passion', type: 'line' },
-    ],
-  },
-  {
     id: 'dt-02',
     section: 'daily',
-    title: '②マインドセットプログラム14日分を実施',
+    title: '①マインドセットプログラム14日分を実施',
     description: 'AI連携のマインドセットプログラムに毎日取り組みましょう。',
-    sortOrder: 2,
+    sortOrder: 1,
     links: [
       { label: 'プログラムを開始', url: 'https://placeholder-ai-mindset.com', type: 'external' },
     ],
+  },
+  {
+    id: 'dt-01',
+    section: 'daily',
+    title: '②毎朝パッション動画を投稿する',
+    description: '①のマインドセットプログラムの内容をもとにアウトプットしましょう。表現力を鍛える、毎日継続する自信をつける、自分の課題を解決させるなど、目的を持って実践してください。自分の動画を見直すのはもちろんのこと、周りの人たちの動画を見ることで、メタ認知能力が鍛えられます。「自分はどう見られるのか？どのように表現したら見た人が面白いと感じるのか？」を考えて実践していきましょう。',
+    sortOrder: 2,
+    links: [
+      { label: 'パッション動画グループ', url: 'https://line.me/placeholder-passion', type: 'line' },
+      { label: '詳細説明はこちら', url: 'https://drive.google.com/file/d/1vovJ2QN4Q_lJ-rGM-RkAvfOZ7syVHcts/view?usp=sharing', type: 'external' },
+    ],
+    note: '※ 初投稿の動画は消さずに保存しておいてください！成長してから過去のものを比較できます。',
   },
   {
     id: 'dt-03',

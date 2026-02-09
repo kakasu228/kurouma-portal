@@ -59,25 +59,27 @@ export default function HomePage() {
         const Icon = SECTION_ICONS[section.key]
 
         return (
-          <section key={section.key} className="px-4 pt-6">
-            <div className="flex items-center gap-2 mb-1">
-              <Icon size={18} className="text-blue-500" />
-              <h2 className="text-base font-semibold text-gray-900">
-                {section.label}
-              </h2>
-            </div>
-            <p className="mb-3 text-xs text-gray-400">{section.description}</p>
-            <div className="space-y-3">
-              {items.map((item) => (
-                <GuideCard key={item.id} item={item} />
-              ))}
-            </div>
-          </section>
+          <div key={section.key}>
+            <section className="px-4 pt-6">
+              <div className="flex items-center gap-2 mb-1">
+                <Icon size={18} className="text-blue-500" />
+                <h2 className="text-base font-semibold text-gray-900">
+                  {section.label}
+                </h2>
+              </div>
+              <p className="mb-3 text-xs text-gray-400">{section.description}</p>
+              <div className="space-y-3">
+                {items.map((item) => (
+                  <GuideCard key={item.id} item={item} />
+                ))}
+              </div>
+            </section>
+
+            {/* Message templates — after first-week section */}
+            {section.key === 'first-week' && <MessageTemplates />}
+          </div>
         )
       })}
-
-      {/* Message templates */}
-      <MessageTemplates />
 
       {/* bottom spacer */}
       <div className="h-4" />

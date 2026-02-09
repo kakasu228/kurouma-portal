@@ -86,3 +86,33 @@ body {
   margin: 16px 0;
   font-style: normal;
 }
+
+/* Confetti particle animation */
+@keyframes confetti {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--tx), var(--ty)) rotate(var(--rot)) scale(0);
+    opacity: 0;
+  }
+}
+
+/* Badge pop animation */
+@keyframes badge-pop {
+  0% { transform: scale(0.3); }
+  50% { transform: scale(1.2); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+/* Button press animation */
+@keyframes btn-press {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+.animate-btn-press {
+  animation: btn-press 0.35s ease-out;
+}

@@ -1,8 +1,9 @@
-import { createContext, useCallback, useMemo, type ReactNode } from 'react'
-import type { CompletionRecord, CompletionService } from '@/types'
+import { createContext, useCallback, useMemo, useState, type ReactNode } from 'react'
+import type { CompletionRecord, CompletionService, LevelUpInfo } from '@/types'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { useAuth } from '@/hooks/useAuth'
 import { GUIDE_ITEMS } from '@/data/mock-guides'
+import { getLevel } from '@/data/levels'
 
 export const CompletionContext = createContext<CompletionService | null>(null)
 
@@ -12,6 +13,7 @@ export function CompletionProvider({ children }: { children: ReactNode }) {
     `kurouma:completions:${user.id}`,
     [],
   )
+  const [pendingLevelUp, setPendingLevelUp] = useState<LevelUpInfo | null>(null)
 
   const isCompleted = useCallback(
     (guideId: string) => completions.some((c) => c.guideId === guideId),
@@ -25,14 +27,28 @@ export function CompletionProvider({ children }: { children: ReactNode }) {
         if (exists) {
           return prev.filter((c) => c.guideId !== guideId)
         }
-        return [
+
+        const newCompletions = [
           ...prev,
           { guideId, userId: user.id, completedAt: new Date().toISOString() },
         ]
+
+        // ランクアップ検知
+        const oldLevel = getLevel(prev.length)
+        const newLevel = getLevel(newCompletions.length)
+        if (newLevel.min > oldLevel.min) {
+          setPendingLevelUp({ level: newLevel })
+        }
+
+        return newCompletions
       })
     },
     [user.id, setCompletions],
   )
+
+  const clearLevelUp = useCallback(() => {
+    setPendingLevelUp(null)
+  }, [])
 
   const value = useMemo<CompletionService>(
     () => ({
@@ -41,8 +57,10 @@ export function CompletionProvider({ children }: { children: ReactNode }) {
       toggleCompletion,
       completedCount: completions.length,
       totalCount: GUIDE_ITEMS.length,
+      pendingLevelUp,
+      clearLevelUp,
     }),
-    [completions, isCompleted, toggleCompletion],
+    [completions, isCompleted, toggleCompletion, pendingLevelUp, clearLevelUp],
   )
 
   return (

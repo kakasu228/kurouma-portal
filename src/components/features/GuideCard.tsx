@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   Play,
@@ -50,6 +51,7 @@ export function GuideCard({ item }: GuideCardProps) {
   const { getLessonById } = useLessons()
   const { isCompleted, toggleCompletion } = useCompletions()
   const completed = isCompleted(item.id)
+  const [pressing, setPressing] = useState(false)
   const hasMedia = item.media && item.media.length > 0
   const hasLinks = item.links && item.links.length > 0
   const linkedLesson = item.linkedLessonId
@@ -147,12 +149,17 @@ export function GuideCard({ item }: GuideCardProps) {
 
       {/* Completion button */}
       <button
-        onClick={() => toggleCompletion(item.id)}
+        onClick={() => {
+          setPressing(true)
+          toggleCompletion(item.id)
+          setTimeout(() => setPressing(false), 350)
+        }}
         className={cn(
           'mt-4 flex w-full items-center justify-center gap-2 rounded-xl py-3 text-[14px] font-semibold transition-all duration-300',
           completed
             ? 'bg-emerald-500 text-white active:bg-emerald-600'
             : 'bg-blue-500 text-white active:bg-blue-600',
+          pressing && 'animate-btn-press',
         )}
       >
         {completed ? (

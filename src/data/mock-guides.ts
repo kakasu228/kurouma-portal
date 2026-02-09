@@ -71,8 +71,9 @@ const firstWeekItems: GuideItem[] = [
     sortOrder: 2,
     links: [
       { label: '目標達成シート', url: 'https://docs.google.com/document/d/placeholder-goal', type: 'google-sheets' },
+      { label: 'スマホでの編集方法（動画）', url: 'https://drive.google.com/file/d/1ofMSNjhWqNizT1EsJQab4j1WGFQVG6Nf/view?usp=sharing', type: 'external' },
     ],
-    note: '※ スプレッドシートのため、PCからの操作を推奨します',
+    note: '※ スマートフォンから編集する場合は上の動画をご確認ください',
   },
   {
     id: 'fw-03',
@@ -82,8 +83,9 @@ const firstWeekItems: GuideItem[] = [
     sortOrder: 3,
     links: [
       { label: '自己理解シート', url: 'https://docs.google.com/document/d/placeholder-self', type: 'google-sheets' },
+      { label: 'スマホでの編集方法（動画）', url: 'https://drive.google.com/file/d/1ofMSNjhWqNizT1EsJQab4j1WGFQVG6Nf/view?usp=sharing', type: 'external' },
     ],
-    note: '※ スプレッドシートのため、PCからの操作を推奨します',
+    note: '※ スマートフォンから編集する場合は上の動画をご確認ください',
   },
   {
     id: 'fw-04',
